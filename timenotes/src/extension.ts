@@ -15,15 +15,15 @@ export function activate(context: vscode.ExtensionContext) {
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
     let disposable = vscode.commands.registerCommand('extension.sayHello', () => {
-        // The code you place here will be executed every time your command is executed
-
-        // Display a message box to the user
-        vscode.window.showInformationMessage('Hello World!');
+        vscode.window.showInformationMessage('李鹏程 测试!');
     });
-
     context.subscriptions.push(disposable);
+    let disposable1 = vscode.commands.registerCommand('extension.sayHello1', () => {
+        vscode.window.showInformationMessage('李鹏程 测试1!');
+    });
+    context.subscriptions.push(disposable1);
 }
 
-// this method is called when your extension is deactivated
+// 扩展被禁用的时候调用的方法
 export function deactivate() {
 }
